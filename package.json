@@ -1,13 +1,13 @@
 {
     "name": "sanshui-request",
-    "version": "3.0.7",
+    "version": "1.0.0",
     "description": "基于Promise实现uni-app request 请求插件",
     "keywords": [
         "uni-app",
         "request",
         "Promise",
         "sanshui",
-        "sanshui-request"
+        "luch-request"
     ],
     "main": "src/lib/luch-request.js",
     "scripts": {
@@ -22,14 +22,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/lei-mu/luch-request.git"
+        "url": "https://github.com/MrChenYZ/sanshui-request.git"
     },
     "author": "luch",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/lei-mu/luch-request/issues"
+        "url": "https://github.com/MrChenYZ/sanshui-request/issues"
     },
-    "homepage": "https://www.quanzhan.co/luch-request/",
+    "homepage": "https://www.quanzhan.co/sanshui-request/",
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@babel/plugin-proposal-class-properties": "^7.8.3",
