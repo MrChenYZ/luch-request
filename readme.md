@@ -1,10 +1,11 @@
-# luch-request
+# sanshui-request
+## 首先这个插件不是我写的,由于业务需求需要加2个参数过滤，所以发布此插件供自己的多个项目使用,该插件源地址[[luch-request]](https://github.com/lei-mu/luch-request "luch-request")
 
-[![npm](https://img.shields.io/npm/l/luch-request "npm")](https://www.npmjs.com/package/luch-request "npm")
-[![npm](https://img.shields.io/npm/v/luch-request "npm")](https://www.npmjs.com/package/luch-request "npm")
-[![github](https://img.shields.io/github/package-json/v/lei-mu/luch-request "github")](https://github.com/lei-mu/luch-request "github")
-[![github stars](https://img.shields.io/github/stars/lei-mu/luch-request.svg "github stars")](https://github.com/lei-mu/luch-request "github stars")
-[![github forks](https://img.shields.io/github/forks/lei-mu/luch-request.svg "github forks")](https://github.com/lei-mu/luch-request "github forks")
+[![npm](https://img.shields.io/npm/l/sanshui-request "npm")](https://www.npmjs.com/package/sanshui-request "npm")
+[![npm](https://img.shields.io/npm/v/sanshui-request "npm")](https://www.npmjs.com/package/sanshui-request "npm")
+[![github](https://img.shields.io/github/package-json/v/lei-mu/sanshui-request "github")](https://github.com/lei-mu/sanshui-request "github")
+[![github stars](https://img.shields.io/github/stars/lei-mu/sanshui-request.svg "github stars")](https://github.com/lei-mu/sanshui-request "github stars")
+[![github forks](https://img.shields.io/github/forks/lei-mu/sanshui-request.svg "github forks")](https://github.com/lei-mu/sanshui-request "github forks")
 
 - 基于 Promise 对象实现更简单的 request 使用方式，支持请求和响应拦截
 - 支持全局挂载
@@ -21,15 +22,15 @@
 ###### 使用npm
 
 ``` javascript
-npm i luch-request -S
+npm i sanshui-request -S
 ```
-使用npm前阅读[快速上手](https://www.quanzhan.co/luch-request/handbook/#npm "快速上手")
+使用npm前阅读[快速上手](https://www.quanzhan.co/sanshui-request/handbook/#npm "快速上手")
 
 
 ###### github
 
-[github](https://github.com/lei-mu/luch-request "github")
-安装依赖后 ` npm run build ` ，使用DCloud/luch-request 文件夹即可
+[github](https://github.com/lei-mu/sanshui-request "github")
+安装依赖后 ` npm run build ` ，使用DCloud/sanshui-request 文件夹即可
 
 
 ###### DCloud插件市场:
@@ -41,8 +42,8 @@ Example
 创建实例  
 
 ``` javascript 
-import Request from '@/utils/luch-request/index.js' // 下载的插件
-// import Request from 'luch-request' // 使用npm
+import Request from '@/utils/sanshui-request/index.js' // 下载的插件
+// import Request from 'sanshui-request' // 使用npm
 
 const http = new Request();
 ```
@@ -173,11 +174,11 @@ http.post('/user/login', {userName: 'name', password: '123456'}, {
   })
 ```
 
-luch-request Guide
+sanshui-request Guide
 ------------
-[luch-request 官网地址](https://www.quanzhan.co/luch-request/ "luch-request 官网地址")
+[sanshui-request 官网地址](https://www.quanzhan.co/sanshui-request/ "sanshui-request 官网地址")
 <br>
-[github](https://github.com/lei-mu/luch-request "github")
+[github](https://github.com/lei-mu/sanshui-request "github")
 
 友情链接
 ------------
@@ -200,7 +201,7 @@ luch-request Guide
       可以点击看一下uni-request 的api 文档，data支持的文件类型只有<code>Object/String/ArrayBuffer</code>这个真跟我没啥关系 0.0
 4. TypeError: undefined is not an object (evaluating 'this.$http.get')
     - 不知道为啥问的人这么多？太基础了，百度学习一下 export default 和export，头大。
-    - `import { http } from '@/utils/luch-request/index.js'`   
+    - `import { http } from '@/utils/sanshui-request/index.js'`   
 5. 什么参数需要在` setConfig ` 设置？什么参数需要在` request ` 拦截器设置？
     - ` setConfig ` 适用于设置一些静态的/默认的参数；比如header 里的一些默认值、默认全局参数（全局请求配置）。` token ` 并不适合在这里设置。
     - ` interceptors.request ` 拦截器适用范围较广，但我仍然建议把一些静态的东西放在 ` setConfig ` 里。拦截器会在每次请求调用，而 ` setConfig ` 仅在调用时修改一遍。
@@ -216,7 +217,7 @@ tip
 issue
 ------------
 - DCloud: 有任何问题或者建议可以=> <a href="https://ask.dcloud.net.cn/question/74922" target="_blank">issue提交</a>,先给个五星好评QAQ!!
-- github: [Issues](https://github.com/lei-mu/luch-request/issues "Issues")
+- github: [Issues](https://github.com/lei-mu/sanshui-request/issues "Issues")
 
 
 作者想说
@@ -225,7 +226,7 @@ issue
 - 最近发现有插件与我雷同，当初接触uni-app 就发现插件市场虽然有封装的不错的request库，但是都没有对多全局配置做处理，都是通过修改源码的方式配置。我首先推出通过class类，并仿照axios的api实现request请求库，并起名‘仿axios封装request网络请求库，支持拦截器全局配置’。他们虽然修改了部分代码，但是功能与性能并没有优化，反而使代码很冗余。希望能推出新的功能，和性能更加强悍的请求库。（2019-05）
 - 任何形式的‘参考’、‘借鉴’，请标明作者
  ```javascript
- <a href="https://ext.dcloud.net.cn/plugin?id=392">luch-request</a>
+ <a href="https://ext.dcloud.net.cn/plugin?id=392">sanshui-request</a>
  ```
 - 关于问问题
 1. 首先请善于利用搜索引擎，不管百度，还是Google，遇到问题请先自己尝试解决。自己尝试过无法解决，再问。 
@@ -249,10 +250,10 @@ issue
 
 土豪赞赏
 ------------
-[![wechat 打赏](https://oss.quanzhan.co/images/common/my-wechat-qrcode.png?x-oss-process=image/resize,m_lfit,h_150,w_150 "wechat 打赏")](https://www.quanzhan.co/luch-request/acknowledgement/#前言 "wechat 打赏")
-[![支付宝 打赏](https://oss.quanzhan.co/images/common/my-alipay-qrcode.jpg?x-oss-process=image/resize,m_lfit,h_150,w_150 "支付宝 打赏")](https://www.quanzhan.co/luch-request/acknowledgement/#前言 "支付宝 打赏")
+[![wechat 打赏](https://oss.quanzhan.co/images/common/my-wechat-qrcode.png?x-oss-process=image/resize,m_lfit,h_150,w_150 "wechat 打赏")](https://www.quanzhan.co/sanshui-request/acknowledgement/#前言 "wechat 打赏")
+[![支付宝 打赏](https://oss.quanzhan.co/images/common/my-alipay-qrcode.jpg?x-oss-process=image/resize,m_lfit,h_150,w_150 "支付宝 打赏")](https://www.quanzhan.co/sanshui-request/acknowledgement/#前言 "支付宝 打赏")
 
-[打赏事宜具体说明](https://www.quanzhan.co/luch-request/acknowledgement/#前言 "打赏事宜具体说明")
+[打赏事宜具体说明](https://www.quanzhan.co/sanshui-request/acknowledgement/#前言 "打赏事宜具体说明")
 
 
 ###### 您的鼓励是我更新的动力
