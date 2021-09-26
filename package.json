@@ -1,6 +1,6 @@
 {
     "name": "sanshui-request",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "基于Promise实现uni-app request 请求插件",
     "keywords": [
         "uni-app",
